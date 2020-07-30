@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe SignatureTemplate, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe SignatureTemplate do
+    it { should belong_to(:user).class_name('User') }
+  end
 end

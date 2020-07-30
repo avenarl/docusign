@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Signature, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  describe Signature do
+    it { should belong_to(:position).class_name('Position') }
+    it { should belong_to(:signee).class_name('Signee') }
+  end
 end
