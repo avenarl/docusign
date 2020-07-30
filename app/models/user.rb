@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :signees
   has_one :signature_template
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, uniqueness: true, presence: true
 end
